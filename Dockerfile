@@ -1,9 +1,8 @@
-FROM bitnami/minideb:bullseye
-#FROM ubuntu:19.10
-# [dbp:12/30/2021] migrating to minideb stable
+FROM bitnami/minideb:bookworm
 
 RUN apt-get update && apt-get install -y --no-install-recommends --no-install-suggests \
-    postgrey postfix-
+    postgrey \
+	postfix-
 
 EXPOSE 10023
 
